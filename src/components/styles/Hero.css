@@ -1,0 +1,15 @@
+/* Hero */
+.defaultHero,
+.watchesHero {
+  min-height: calc(100vh - 66px);
+  background: url("../img/HomeScreen.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* We overwrite defaultHero class with roomsHero class */
+.watchesHero {
+  background-image: url("../img/HomeScreen.jpg");
+  min-height: 60vh;
+}
+/* End of Hero */
