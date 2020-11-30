@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primaryColor: #af9a7d;
   --mainWhite: #fff;
@@ -14,6 +15,10 @@
   --mainSpacing: 3px;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
 }
 /* globals */
 body {
@@ -23,6 +28,37 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
 }
+.text-title {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.text-blue {
+  color: var(--mainBlue);
+}
+.text-bright {
+  color: var(--mainBlue);
+}
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
+}
+
 h1 {
   font-size: 3em;
   line-height: 1;

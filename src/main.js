@@ -45,15 +45,16 @@ class WatchProvider extends Component {
     return watches;
   };
 
-  getItem = (slug) => {
+  getItem = (id) => {
     let tempWatches = [...this.state.watches];
-    const product = tempWatches.find((item) => item.slug === slug);
+    const product = tempWatches.find((item) => item.id === id);
     return product;
   };
-  getItemIndex = (id) => {
-    let tempProducts = [...this.state.watches];
-    const index = tempProducts.indexOf(this.getItem(id));
-    return index;
+  handleDetail = (id) => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
   };
 
   // we grab everything what inputs are giving us and fix values in the state
@@ -218,7 +219,7 @@ class WatchProvider extends Component {
         value={{
           ...this.state,
           getItem: this.getItem,
-          getItemIndex: this.getItemIndex,
+          handleDetail: this.handleDetail,
           handleChange: this.handleChange,
           addToCart: this.addToCart,
           openModel: this.openModel,
